@@ -10,7 +10,7 @@ else
 
  return {
  description = "Execute network mapper",
- usage = "!nmap [COMMAND]",
+ usage = "!nmap [specificID] [COMMAND]",
  patterns = {
  "^!nmap (specificID) (.*)$"
  },
