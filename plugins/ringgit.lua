@@ -4,7 +4,8 @@ do
 -- July 23, 2015. 
 
 	local function get_ringgit()
-		local url = "http://apilayer.net/api/live?access_key=546be9506fd3dcda391f936de0ede149&currencies=MYR&source=USD&format=1"
+		local access_key = "" --get your own access_key at https://currencylayer.com/
+		local url = "http://apilayer.net/api/live?access_key="..access_key.."&currencies=MYR&source=USD&format=1"
 		local b,c = http.request(url)
 		if c ~= 200 then return nil end
 		local duit = json:decode(b)
