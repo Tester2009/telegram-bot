@@ -5,7 +5,7 @@ do
 
 	local function get_ringgit()
 		local access_key = ""
-		local url = "http://apilayer.net/api/live?access_key="..access_key.."&currencies=MYR&source=USD&format=1"
+		local url = "http://apilayer.net/api/live?access_key="..access_key.."&currencies=MYR&source=USD&format=1" -- get your own access_key at https://currencylayer.com/
 		local b,c = http.request(url)
 		if c ~= 200 then return nil end
 		local duit = json:decode(b)
